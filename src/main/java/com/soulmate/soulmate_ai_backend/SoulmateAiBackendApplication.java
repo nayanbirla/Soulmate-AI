@@ -43,7 +43,19 @@ public class SoulmateAiBackendApplication implements CommandLineRunner {
 				"abc.jpg",
 				"INTP"
 		);
+		Profile profile1=new Profile(
+				"2",
+				"Aman",
+				"Yadav",
+				21,
+				"Indian",
+				Gender.MALE,
+				"Software Engineer",
+				"abd.jpg",
+				"INTP"
+		);
 		profileRepository.save(profile);
+		profileRepository.save(profile1);
 		profileRepository.findAll().forEach(System.out::println);
 
 		Conversation conversation=new Conversation(
